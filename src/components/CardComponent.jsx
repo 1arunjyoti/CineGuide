@@ -23,6 +23,7 @@ const CardComponent = ({ item, type }) => {
           src={`${imagePath}/${item?.poster_path}`}
           alt={item?.title || item?.name}
           height={"100%"}
+          borderRadius={"xl"}
         />
         <Box
           className="overlay"
@@ -35,6 +36,7 @@ const CardComponent = ({ item, type }) => {
           bg="rgba(0,0,0,0.9)"
           opacity={"0"}
           transition={"opacity 0.3s ease-in-out"}
+          borderRadius={"xl"}
         >
           <Text textAlign={"center"}>{item?.title || item?.name}</Text>
           

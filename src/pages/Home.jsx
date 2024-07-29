@@ -33,21 +33,22 @@ const Home = () => {
 
   return (
     <Container maxW={"container.xl"}>
-      <Flex alignItems={"baseline"} gap={"4"} my={"10"}>
-        <Heading as="h2" fontSize={"md"} textTransform={"uppercase"}>
+      <Flex alignItems={"baseline"} justifyContent={"space-between"} gap={"4"} my={"10"}>
+        <Heading as="h2" fontSize={"xl"} textTransform={"uppercase"}>
           Trending
         </Heading>
         <Flex
           alignItems={"center"}
-          gap={"2"}
-          border={"1px solid teal"}
-          borderRadius={"20px"}
+          gap={"3"}
+          border={"3px solid #9ae6b4"}
+          borderRadius={"xl"}
         >
           <Box
             as="button"
-            px="3"
-            py="1"
-            borderRadius={"20px"}
+            px="5"
+            py="2"
+            borderRadius={"xl"}
+            fontWeight={"semibold"}
             bg={`${timeWindow === "day" ? "gray.800" : ""}`}
             onClick={() => setTimeWindow("day")}
           >
@@ -55,9 +56,10 @@ const Home = () => {
           </Box>
           <Box
             as="button"
-            px="3"
-            py="1"
-            borderRadius={"20px"}
+            px="5"
+            py="2"
+            borderRadius={"xl"}
+            fontWeight={"semibold"}
             bg={`${timeWindow === "week" ? "gray.800" : ""}`}
             onClick={() => setTimeWindow("week")}
           >

@@ -1,5 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
+// Supports weights 100-900
+import '@fontsource-variable/montserrat';
 
 const config = {
   initialColorMode: "dark",
@@ -17,6 +19,11 @@ const styles = {
   }),
 };
 
-const theme = extendTheme({ config, styles });
+const theme = extendTheme({ config, 
+  fonts: {
+    heading: `'Montserrat Variable', sans-serif`,
+    body: `'Montserrat Variable', sans-serif`,
+  },
+ });
 
 export default theme;
